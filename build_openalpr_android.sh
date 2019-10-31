@@ -1,8 +1,19 @@
 #!/bin/bash
 
 # You should tweak this section to adapt the paths to your need
-export ANDROID_HOME=/usr/lib/android-sdk
-export NDK_ROOT=/usr/lib/android-sdk/ndk-bundle
+#export ANDROID_HOME=/usr/lib/android-sdk
+#export NDK_ROOT=/usr/lib/android-sdk/ndk-bundle
+if [ -d "$HOME/Android/Sdk" ]; then
+  export ANDROID_HOME=$HOME/Android/Sdk
+  if [ -d "$ANDROID_HOME/ndk_bundle" ]; then
+    export NDK_ROOT=$ANDROID_HOME/ndk_bundle
+    export ANDROID_NDK_HOME=$NDK_ROOT
+  fi
+  PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin
+fi
+echo $HOME
+echo $ANDROID_HOME
+echo $NDK_ROOT
 
 ANDROID_PLATFORM="android-28"
 
