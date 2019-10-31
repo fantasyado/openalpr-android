@@ -56,12 +56,9 @@ cp **/*.h $SCRIPTPATH/openalpr/src/openalpr/ocr/tesseract
 
 cd $SCRIPTPATH
 
-declare -a ANDROID_ABIS=("armeabi"
-			 "armeabi-v7a"
+declare -a ANDROID_ABIS=("armeabi-v7a"
 			 "armeabi-v7a with NEON"
 			 "arm64-v8a"
-			 "mips"
-			 "mips64"
 			 "x86"
 			 "x86_64"
 			)
