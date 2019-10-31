@@ -10,49 +10,46 @@ if [ -d "$HOME/Android/Sdk" ]; then
     export ANDROID_NDK_HOME=$NDK_ROOT
   fi
 fi
-if [ -z "$ANDROID_NDK_ROOT" ]; then
-  _ANDROID_NDK_ROOT=""
-  if [ -z "$_ANDROID_NDK_ROOT" ] && [ -d "/usr/local/$_ANDROID_NDK" ]; then
-    _ANDROID_NDK_ROOT="/usr/local/$_ANDROID_NDK"
+  if [ -d "/usr/local/android-ndk" ]; then
+    export NDK_ROOT=$/usr/local/android-ndk
   fi
 
-  if [ -z "$_ANDROID_NDK_ROOT" ] && [ -d "/opt/$_ANDROID_NDK" ]; then
-    _ANDROID_NDK_ROOT="/opt/$_ANDROID_NDK"
+  if [ -d "/opt/android-ndk" ]; then
+    export NDK_ROOT=$/opt/android-ndk
   fi
 
-  if [ -z "$_ANDROID_NDK_ROOT" ] && [ -d "$HOME/$_ANDROID_NDK" ]; then
-    _ANDROID_NDK_ROOT="$HOME/$_ANDROID_NDK"
+  if [-d "$HOME/android-ndk" ]; then
+    export NDK_ROOT=$HOME/android-ndk
   fi
 
-  if [ -z "$_ANDROID_NDK_ROOT" ] && [ -d "$PWD/$_ANDROID_NDK" ]; then
-    _ANDROID_NDK_ROOT="$PWD/$_ANDROID_NDK"
+  if [ -d "$PWD/$_ANDROID_NDK" ]; then
+    export NDK_ROOT=$PWD/android-ndk
   fi
 
-  if [ -z "$_ANDROID_NDK_ROOT" ] && [ -d "$HOME/Library/Android/$_ANDROID_NDK" ]; then
-    _ANDROID_NDK_ROOT="$HOME/Library/Android/$_ANDROID_NDK"
+  if [ -d "$HOME/Library/Android/android-ndk" ]; then
+    export NDK_ROOT=$HOME/Library/Android/android-ndk
   fi
 
-  if [ -z "$_ANDROID_NDK_ROOT" ] && [ -d "$HOME/Library/Android/sdk/$_ANDROID_NDK" ]; then
-    _ANDROID_NDK_ROOT="$HOME/Library/Android/sdk/$_ANDROID_NDK"
+  if [ -d "$HOME/Library/Android/sdk/android-ndk" ]; then
+    export NDK_ROOT=$HOME/Library/Android/sdk/android-ndk
   fi
 
-  if [ -z "$_ANDROID_NDK_ROOT" ] && [ -d "$HOME/Library/Android/sdk/ndk-bundle" ]; then
+  if [ -d "$HOME/Library/Android/sdk/ndk-bundle" ]; then
     _NDK_VERSION=`cat $HOME/Library/Android/sdk/ndk-bundle/RELEASE.TXT | awk '{print $1}'`
     _NDK_VERSION_1=${_ANDROID_NDK##*-}
     echo $_NDK_VERSION
     echo $_ANDROID_NDK
     echo $_NDK_VERSION_1
-    [ "$_NDK_VERSION" = "$_NDK_VERSION_1" ] && _ANDROID_NDK_ROOT="$HOME/Library/Android/sdk/ndk-bundle"
+    [ "$_NDK_VERSION" = "$_NDK_VERSION_1" ] && export NDK_ROOT=$HOME/Library/Android/sdk/ndk-bundle
     echo $_ANDROID_NDK_ROOT
   fi
 
-  # If a path was set, then export it
-  if [ ! -z "$_ANDROID_NDK_ROOT" ] && [ -d "$_ANDROID_NDK_ROOT" ]; then
-    export ANDROID_NDK_ROOT="$_ANDROID_NDK_ROOT"
-  fi
-fi
+  export ANDROID_NDK_ROOT="$NDK_ROOT
+
+
 echo $HOME
 echo $ANDROID_HOME
+echo $NDK_ROOT
 echo $ANDROID_NDK_ROOT
 
 ANDROID_PLATFORM="android-28"
