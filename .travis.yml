@@ -14,10 +14,10 @@ script:
   - ./build_openalpr_android.sh
 deploy:
   provider: npm
-  email: robert.sasak@gmail.com
+  email: leejoo71@gmail.com
   api_key:
-    secure: TO-BE-ADDED-LATER
+    secure: $tobeaddedlater
   on:
     tags: true
-    repo: RobertSasak/openalpr-android
+    repo: leejoo71/openalpr-android
     branch: master
