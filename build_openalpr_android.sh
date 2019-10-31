@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # You should tweak this section to adapt the paths to your need
-#export ANDROID_HOME=/home/jeremy/Android/Sdk
-#export NDK_ROOT=/home/jeremy/Android/Sdk/ndk-bundle
+export ANDROID_HOME=/usr/local/android-sdk
+export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
 
-#ANDROID_PLATFORM="android-21"
+ANDROID_PLATFORM="android-28"
 
 # In my case, FindJNI.cmake does not find java, so i had to manually specify these
 # You could try without it and remove the cmake variable specification at the bottom of this file
