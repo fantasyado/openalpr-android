@@ -44,7 +44,7 @@ fi
     echo $_ANDROID_NDK_ROOT
   fi
 
-  export ANDROID_NDK_ROOT="$NDK_ROOT
+  export ANDROID_NDK_ROOT=$NDK_ROOT
 
 
 echo $HOME
