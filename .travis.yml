@@ -6,17 +6,20 @@ matrix:
         components:
           - tools
           - platform-tools
-          - build-tools-28.0.3
+          - build-tools-21.0.0
           - tools
 script:
   - yes | sdkmanager "platforms;android-28"
   - chmod +x ./build_openalpr_android.sh
   - ./build_openalpr_android.sh
 deploy:
-  provider: npm
-  email: leejoo71@gmail.com
+  provider: releases
   api_key:
     secure: $tobeaddedlater
+  file: "path "
+  skip_cleanup: true
+  overwrite: true
+  
   on:
     tags: true
     repo: leejoo71/openalpr-android
