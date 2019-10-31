@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # You should tweak this section to adapt the paths to your need
-export ANDROID_HOME=/usr/local/android-sdk
-export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
+export ANDROID_HOME=/usr/lib/android-sdk
+export NDK_ROOT=/usr/lib/android-sdk/ndk-bundle
 
 ANDROID_PLATFORM="android-28"
 
