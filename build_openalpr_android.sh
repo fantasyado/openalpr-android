@@ -18,7 +18,7 @@ fi
     export NDK_ROOT=$/opt/android-ndk
   fi
 
-  if [-d "$HOME/android-ndk" ]; then
+  if [ -d "$HOME/android-ndk" ]; then
     export NDK_ROOT=$HOME/android-ndk
   fi
 
