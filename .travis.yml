@@ -9,6 +9,7 @@ matrix:
           - android-28
           - tools
           - ndk
+          - ndk_bundle
           - build-tools
           - cmake-3.10.2.4988404
           - lldb-3.1
