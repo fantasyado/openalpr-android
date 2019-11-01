@@ -109,6 +109,7 @@ Generating project for arch $i
     cd "$i"
     
     cmake \
+        -DANDROID_TOOLCHAIN=clang \
 	-DCMAKE_TOOLCHAIN_FILE=$NDK_ROOT/build/cmake/android.toolchain.cmake \
 	-DANDROID_NDK=$NDK_ROOT \
 	-DCMAKE_BUILD_TYPE=Release \
