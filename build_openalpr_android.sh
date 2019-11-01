@@ -3,7 +3,7 @@
 # You should tweak this section to adapt the paths to your need
 #export ANDROID_HOME=/usr/local/android-sdk
 #export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
-echo ls /usr/local/android-sdk
+ls /usr/local/android-sdk
 if [ -d "$HOME/Android/Sdk" ]; then
   export ANDROID_HOME=$HOME/Android/Sdk
   if [ -d "$ANDROID_HOME/ndk_bundle" ]; then
@@ -12,11 +12,11 @@ if [ -d "$HOME/Android/Sdk" ]; then
   fi
 fi
   if [ -d "/usr/local/android-ndk" ]; then
-    export NDK_ROOT=$/usr/local/android-ndk
+    export NDK_ROOT=/usr/local/android-ndk
   fi
 
   if [ -d "/opt/android-ndk" ]; then
-    export NDK_ROOT=$/opt/android-ndk
+    export NDK_ROOT=/opt/android-ndk
   fi
 
   if [ -d "$HOME/android-ndk" ]; then
