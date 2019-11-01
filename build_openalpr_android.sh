@@ -106,7 +106,6 @@ Generating project for arch $i
 	-DCMAKE_BUILD_TYPE=Release \
 	-DANDROID_PLATFORM=$ANDROID_PLATFORM \
 	-DANDROID_ABI="$i" \
-	-DANDROID_STL=gnustl_static \
 	-DANDROID_CPP_FEATURES="rtti exceptions" \
 	-DTesseract_INCLUDE_BASEAPI_DIR=$TESSERACT_SRC_DIR/api \
 	-DTesseract_INCLUDE_CCSTRUCT_DIR=$TESSERACT_SRC_DIR/ccstruct \
