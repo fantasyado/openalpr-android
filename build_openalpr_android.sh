@@ -1,58 +1,16 @@
 #!/bin/bash
 
 # You should tweak this section to adapt the paths to your need
-#export ANDROID_HOME=/usr/local/android-sdk
-#export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
+export ANDROID_HOME=/usr/local/android-sdk
+export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
 echo ls /usr/local/android-sdk
 ls /usr/local/android-sdk
 echo ls /home/travis/build/leejoo71/openalpr-android/
 ls /home/travis/build/leejoo71/openalpr-android/
-echo ls /home/travis/build/leejoo71/openalpr-android/android-ndk
-ls /home/travis/build/leejoo71/openalpr-android/android-ndk
-if [ -d "$HOME/Android/Sdk" ]; then
-  export ANDROID_HOME=$HOME/Android/Sdk
-  if [ -d "$ANDROID_HOME/ndk_bundle" ]; then
-    export NDK_ROOT=$ANDROID_HOME/ndk_bundle
-    export ANDROID_NDK_HOME=$NDK_ROOT
-  fi
-fi
-  if [ -d "/usr/local/android-ndk" ]; then
-    export NDK_ROOT=/usr/local/android-ndk
-  fi
+echo ls /usr/local/android-sdk/ndk-bundle
+ls /usr/local/android-sdk/ndk-bundle
 
-  if [ -d "/opt/android-ndk" ]; then
-    export NDK_ROOT=/opt/android-ndk
-  fi
-
-  if [ -d "$HOME/android-ndk" ]; then
-    export NDK_ROOT=$HOME/android-ndk
-  fi
-
-  if [ -d "$PWD/$_ANDROID_NDK" ]; then
-    export NDK_ROOT=$PWD/android-ndk
-  fi
-
-  if [ -d "$HOME/Library/Android/android-ndk" ]; then
-    export NDK_ROOT=$HOME/Library/Android/android-ndk
-  fi
-
-  if [ -d "$HOME/Library/Android/sdk/android-ndk" ]; then
-    export NDK_ROOT=$HOME/Library/Android/sdk/android-ndk
-  fi
-
-  if [ -d "$HOME/Library/Android/sdk/ndk-bundle" ]; then
-    _NDK_VERSION=`cat $HOME/Library/Android/sdk/ndk-bundle/RELEASE.TXT | awk '{print $1}'`
-    _NDK_VERSION_1=${_ANDROID_NDK##*-}
-    echo $_NDK_VERSION
-    echo $_ANDROID_NDK
-    echo $_NDK_VERSION_1
-    [ "$_NDK_VERSION" = "$_NDK_VERSION_1" ] && export NDK_ROOT=$HOME/Library/Android/sdk/ndk-bundle
-    echo $_ANDROID_NDK_ROOT
-  fi
-
-  export ANDROID_NDK_ROOT=$NDK_ROOT
-
-
+export ANDROID_NDK_ROOT=$NDK_ROOT
 echo $HOME
 echo $ANDROID_HOME
 echo $NDK_ROOT
