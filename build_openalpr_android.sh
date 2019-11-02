@@ -3,18 +3,18 @@
 # You should tweak this section to adapt the paths to your need
 export ANDROID_HOME=/usr/local/android-sdk
 export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
-echo ls /usr/local/android-sdk
-ls /usr/local/android-sdk
-echo ls /home/travis/build/leejoo71/openalpr-android/
-ls /home/travis/build/leejoo71/openalpr-android/
-echo ls /usr/local/android-sdk/ndk-bundle
-ls /usr/local/android-sdk/ndk-bundle
+#echo ls /usr/local/android-sdk
+#ls /usr/local/android-sdk
+#echo ls /home/travis/build/leejoo71/openalpr-android/
+#ls /home/travis/build/leejoo71/openalpr-android/
+#echo ls /usr/local/android-sdk/ndk-bundle
+#ls /usr/local/android-sdk/ndk-bundle
 
 export ANDROID_NDK_ROOT=$NDK_ROOT
-echo $HOME
-echo $ANDROID_HOME
-echo $NDK_ROOT
-echo $ANDROID_NDK_ROOT
+#echo $HOME
+#echo $ANDROID_HOME
+#echo $NDK_ROOT
+#echo $ANDROID_NDK_ROOT
 
 ANDROID_PLATFORM="android-28"
 
@@ -46,7 +46,9 @@ cd ..
 # Download and extract OpenCV4Android
 ####################################################################
 
-wget -O opencv-3.2.0-android-sdk.zip -- https://sourceforge.net/projects/opencvlibrary/files/opencv-android/3.2.0/opencv-3.2.0-android-sdk.zip/download 
+wget -O opencv-3.2.0-android-sdk.zip -- https://sourceforge.net/projects/opencvlibrary/files/3.4.8/opencv-3.4.8-android-sdk.zip/download
+#https://sourceforge.net/projects/opencvlibrary/files/opencv-android/3.2.0/opencv-3.2.0-android-sdk.zip/download 
+                                        
 unzip opencv-3.2.0-android-sdk.zip
 rm opencv-3.2.0-android-sdk.zip
 
