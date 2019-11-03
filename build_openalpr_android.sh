@@ -16,7 +16,7 @@ export ANDROID_NDK_ROOT=$NDK_ROOT
 #echo $NDK_ROOT
 #echo $ANDROID_NDK_ROOT
 
-ANDROID_PLATFORM="android-28"
+ANDROID_PLATFORM="android-21"
 
 # In my case, FindJNI.cmake does not find java, so i had to manually specify these
 # You could try without it and remove the cmake variable specification at the bottom of this file
@@ -46,7 +46,7 @@ cd ..
 # Download and extract OpenCV4Android
 ####################################################################
 
-wget -O opencv-3.2.0-android-sdk.zip -- https://sourceforge.net/projects/opencvlibrary/files/3.4.8/opencv-3.4.8-android-sdk.zip/download
+wget -O opencv-3.2.0-android-sdk.zip -- https://sourceforge.net/projects/opencvlibrary/files/3.2.0/opencv-3.2.0-android-sdk.zip/download
 #https://sourceforge.net/projects/opencvlibrary/files/opencv-android/3.2.0/opencv-3.2.0-android-sdk.zip/download 
                                         
 unzip opencv-3.2.0-android-sdk.zip
