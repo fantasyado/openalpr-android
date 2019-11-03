@@ -46,7 +46,7 @@ cd ..
 # Download and extract OpenCV4Android
 ####################################################################
 
-wget -O opencv-3.2.0-android-sdk.zip -- https://sourceforge.net/projects/opencvlibrary/files/3.2.0/opencv-3.2.0-android-sdk.zip/download
+wget -O opencv-3.2.0-android-sdk.zip -- https://sourceforge.net/projects/opencvlibrary/files/opencv-android/3.2.0/opencv-3.2.0-android-sdk.zip/download
 #https://sourceforge.net/projects/opencvlibrary/files/opencv-android/3.2.0/opencv-3.2.0-android-sdk.zip/download 
                                         
 unzip opencv-3.2.0-android-sdk.zip
