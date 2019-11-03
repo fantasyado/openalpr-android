@@ -16,7 +16,7 @@ export ANDROID_NDK_ROOT=$NDK_ROOT
 #echo $NDK_ROOT
 #echo $ANDROID_NDK_ROOT
 
-ANDROID_PLATFORM="android-21"
+ANDROID_PLATFORM="android-22"
 
 # In my case, FindJNI.cmake does not find java, so i had to manually specify these
 # You could try without it and remove the cmake variable specification at the bottom of this file
