@@ -5,8 +5,10 @@ export ANDROID_HOME=/usr/local/android-sdk
 export NDK_ROOT=/usr/local/android-sdk/ndk
 #echo ls /usr/local
 #ls /usr/local
-#echo ls /usr/local/android-sdk
-#ls /usr/local/android-sdk
+echo ls /usr/local/android-sdk
+ls /usr/local/android-sdk
+echo ls /usr/local/android-sdk/sdk
+ls /usr/local/android-sdk/sdk
 #echo ls /home/travis/build/leejoo71/openalpr-android/
 #ls /home/travis/build/leejoo71/openalpr-android/
 #echo ls /usr/local/android-sdk/ndk-bundle
