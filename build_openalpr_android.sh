@@ -16,7 +16,7 @@ export ANDROID_NDK_ROOT=$NDK_ROOT
 #echo $NDK_ROOT
 #echo $ANDROID_NDK_ROOT
 
-export ANDROID_PLATFORM=android-26
+export ANDROID_PLATFORM=android-21
 
 # In my case, FindJNI.cmake does not find java, so i had to manually specify these
 # You could try without it and remove the cmake variable specification at the bottom of this file
@@ -119,7 +119,7 @@ Generating project for arch $i
 	-DANDROID_ABI="$i" \
 	-DANDROID_CPP_FEATURES="rtti exceptions" \
 	-DANDROID_STL=c++_static \
-	-DANDROID_CPPFLAGS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -lopencv_calib3d -lopencv_fac \
+	-DANDROID_COMPILER_FLAGS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -lopencv_calib3d -lopencv_fac \
 	-DANDROID_ARM_MODE=arm \
 	-DTesseract_INCLUDE_BASEAPI_DIR=$TESSERACT_SRC_DIR/api \
 	-DTesseract_INCLUDE_CCSTRUCT_DIR=$TESSERACT_SRC_DIR/ccstruct \
