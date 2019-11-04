@@ -17,7 +17,7 @@ install:
   - echo y | sdkmanager "lldb;3.1"
     #  - sdkmanager --update
 before_script:
-  - export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
+  - export ANDROID_NDK_HOME=$ANDROID_HOME/ndk
   
 script:
   - chmod +x ./build_openalpr_android.sh
