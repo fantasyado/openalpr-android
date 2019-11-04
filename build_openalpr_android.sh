@@ -2,13 +2,13 @@
 
 # You should tweak this section to adapt the paths to your need
 export ANDROID_HOME=/usr/local/android-sdk
-export NDK_ROOT=/usr/local/android-sdk/ndk
+export NDK_ROOT=/usr/local/android-sdk/ndk/17.2.4988734
 #echo ls /usr/local
 #ls /usr/local
 echo ls /usr/local/android-sdk
 ls /usr/local/android-sdk
-echo ls /usr/local/android-sdk/ndk/
-ls /usr/local/android-sdk/ndk/
+echo ls /usr/local/android-sdk/ndk/17.2.4988734
+ls /usr/local/android-sdk/ndk/17.2.4988734
 #echo ls /home/travis/build/leejoo71/openalpr-android/
 #ls /home/travis/build/leejoo71/openalpr-android/
 #echo ls /usr/local/android-sdk/ndk-bundle
