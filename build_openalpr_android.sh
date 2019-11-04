@@ -20,12 +20,12 @@ export ANDROID_PLATFORM=android-26
 
 # In my case, FindJNI.cmake does not find java, so i had to manually specify these
 # You could try without it and remove the cmake variable specification at the bottom of this file
-JAVA_HOME=/usr/lib/jvm/java-8-oracle
-JAVA_AWT_LIBRARY=$JAVA_HOME/jre/lib/amd64
-JAVA_JVM_LIBRARY=$JAVA_HOME/jre/lib/amd64
-JAVA_INCLUDE_PATH=$JAVA_HOME/include
-JAVA_INCLUDE_PATH2=$JAVA_HOME/include/linux
-JAVA_AWT_INCLUDE_PATH=$JAVA_HOME/include
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export JAVA_AWT_LIBRARY=$JAVA_HOME/jre/lib/amd64
+export JAVA_JVM_LIBRARY=$JAVA_HOME/jre/lib/amd64
+export JAVA_INCLUDE_PATH=$JAVA_HOME/include
+export JAVA_INCLUDE_PATH2=$JAVA_HOME/include/linux
+export JAVA_AWT_INCLUDE_PATH=$JAVA_HOME/include
 
 SCRIPTPATH=`pwd`
 echo $SCRIPTPATH
