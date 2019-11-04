@@ -7,10 +7,10 @@ export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
 #ls /usr/local/android-sdk
 #echo ls /home/travis/build/leejoo71/openalpr-android/
 #ls /home/travis/build/leejoo71/openalpr-android/
-echo ls /usr/local/android-sdk/ndk-bundle
-ls /usr/local/android-sdk/ndk-bundle
-echo head /usr/local/android-sdk/ndk-bundle/source.properties
-head /usr/local/android-sdk/ndk-bundle/source.properties
+#echo ls /usr/local/android-sdk/ndk-bundle
+#ls /usr/local/android-sdk/ndk-bundle
+#echo head /usr/local/android-sdk/ndk-bundle/source.properties
+#head /usr/local/android-sdk/ndk-bundle/source.properties
 #ls /usr/local/android-sdk/ndk-bundle
 
 export ANDROID_NDK_ROOT=$NDK_ROOT
@@ -41,6 +41,7 @@ git clone --recursive https://github.com/rmtheis/tess-two.git tess2
 cd tess2
 echo "sdk.dir=$ANDROID_HOME
 ndk.dir=$NDK_ROOT" > local.properties
+head local.properties
 ./gradlew assemble
 cd ..
 
