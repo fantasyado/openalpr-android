@@ -7,7 +7,7 @@ export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
 #ls /usr/local/android-sdk
 #echo ls /home/travis/build/leejoo71/openalpr-android/
 #ls /home/travis/build/leejoo71/openalpr-android/
-#echo ls /usr/local/android-sdk/ndk-bundle
+echo ls /usr/local/android-sdk/ndk-bundle
 #ls /usr/local/android-sdk/ndk-bundle
 
 export ANDROID_NDK_ROOT=$NDK_ROOT
@@ -118,7 +118,7 @@ Generating project for arch $i
 	-DANDROID_ABI="$i" \
 	-DANDROID_CPP_FEATURES="rtti exceptions" \
 	-DANDROID_STL=c++_static \
-	-DANDROID_COMPILER_FLAGS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -lopencv_calib3d \
+	-DANDROID_COMPILER_FLAGS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -lopencv_calib3d -Wconstant-conversion \
 	-DANDROID_LINKER_FLAGS=-lopencv_core
 	-DANDROID_ARM_MODE=arm \
 	-DANDROID_LD= -latomic \
