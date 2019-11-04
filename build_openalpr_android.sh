@@ -132,6 +132,7 @@ Generating project for arch $i
 	-DJAVA_AWT_INCLUDE_PATH=$JAVA_AWT_INCLUDE_PATH \
 	-DPngt_LIB=$TESSERACT_LIB_DIR/libpngt.so \
 	-DJpgt_LIB=$TESSERACT_LIB_DIR/libjpgt.so \
+	-DLIBS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -lopencv_calib3d -lopencv_fac \
 	-DJnigraphics_LIB=$NDK_ROOT/platforms/$ANDROID_PLATFORM/arch-$arch/usr/$lib/libjnigraphics.so \
 	-DANDROID_ARM_MODE=arm \
 	../../src/
