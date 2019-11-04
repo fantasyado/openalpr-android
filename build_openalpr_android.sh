@@ -3,8 +3,10 @@
 # You should tweak this section to adapt the paths to your need
 export ANDROID_HOME=/usr/local/android-sdk
 export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
-#echo ls /usr/local/android-sdk
-#ls /usr/local/android-sdk
+echo ls /usr/local
+ls /usr/local
+echo ls /usr/local/android-sdk
+ls /usr/local/android-sdk
 #echo ls /home/travis/build/leejoo71/openalpr-android/
 #ls /home/travis/build/leejoo71/openalpr-android/
 #echo ls /usr/local/android-sdk/ndk-bundle
