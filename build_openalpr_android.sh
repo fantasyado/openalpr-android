@@ -111,13 +111,16 @@ Generating project for arch $i
     cd "$i"
     #-DANDROID_STL=gnustl_static \
     cmake \
-        -DANDROID_TOOLCHAIN=clang \
 	-DCMAKE_TOOLCHAIN_FILE=$NDK_ROOT/build/cmake/android.toolchain.cmake \
+        -DANDROID_TOOLCHAIN=clang \
 	-DANDROID_NDK=$NDK_ROOT \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DANDROID_PLATFORM=$ANDROID_PLATFORM \
 	-DANDROID_ABI="$i" \
 	-DANDROID_CPP_FEATURES="rtti exceptions" \
+	-DANDROID_STL=c++_static \
+	-DANDROID_CPPFLAGS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -lopencv_calib3d -lopencv_fac \
+	-DANDROID_ARM_MODE=arm \
 	-DTesseract_INCLUDE_BASEAPI_DIR=$TESSERACT_SRC_DIR/api \
 	-DTesseract_INCLUDE_CCSTRUCT_DIR=$TESSERACT_SRC_DIR/ccstruct \
 	-DTesseract_INCLUDE_CCMAIN_DIR=$TESSERACT_SRC_DIR/ccmain \
@@ -132,10 +135,7 @@ Generating project for arch $i
 	-DJAVA_AWT_INCLUDE_PATH=$JAVA_AWT_INCLUDE_PATH \
 	-DPngt_LIB=$TESSERACT_LIB_DIR/libpngt.so \
 	-DJpgt_LIB=$TESSERACT_LIB_DIR/libjpgt.so \
-	-DANDROID_STL=c++_static \
-	-DAPP_CPPFLAGS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -lopencv_calib3d -lopencv_fac \
 	-DJnigraphics_LIB=$NDK_ROOT/platforms/$ANDROID_PLATFORM/arch-$arch/usr/$lib/libjnigraphics.so \
-	-DANDROID_ARM_MODE=arm \
 	../../src/
 
     cmake --build . -- -j 8
