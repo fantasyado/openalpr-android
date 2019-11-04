@@ -40,7 +40,8 @@ echo $SCRIPTPATH
 # Prepare Tesseract and Leptonica, using rmtheis/tess-two repository
 ####################################################################
 
-git clone --recursive https://github.com/rmtheis/tess-two.git tess2
+#git clone --recursive https://github.com/rmtheis/tess-two.git tess2
+git clone --recursive https://github.com/leejoo71/tess-two.git tess2
 
 cd tess2
 echo "ndk.dir=$NDK_ROOT
