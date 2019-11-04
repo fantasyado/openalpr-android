@@ -8,6 +8,9 @@ export NDK_ROOT=/usr/local/android-sdk/ndk-bundle
 #echo ls /home/travis/build/leejoo71/openalpr-android/
 #ls /home/travis/build/leejoo71/openalpr-android/
 echo ls /usr/local/android-sdk/ndk-bundle
+ls /usr/local/android-sdk/ndk-bundle
+echo head /usr/local/android-sdk/ndk-bundle/source.properties
+head /usr/local/android-sdk/ndk-bundle/source.properties
 #ls /usr/local/android-sdk/ndk-bundle
 
 export ANDROID_NDK_ROOT=$NDK_ROOT
