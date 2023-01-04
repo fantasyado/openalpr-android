@@ -6,7 +6,7 @@ matrix:
         components:
           - platform-tools
           - tools
-          - android-28
+          - android-27
           - extras-android-m2repository
           - extras-google-m2repository
           
