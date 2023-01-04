@@ -1,6 +1,7 @@
 matrix:
   include:
     - language: android
+      dist: xenial
       jdk: oraclejdk8
       android:
         components:

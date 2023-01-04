@@ -48,7 +48,7 @@ cd tess2
 echo "ndk.dir=$NDK_ROOT
 sdk.dir=$ANDROID_HOME" > local.properties
 head local.properties
-# ./gradlew assemble
+./gradlew assemble
 cd ..
 
 
