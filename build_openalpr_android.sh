@@ -44,11 +44,11 @@ git clone --recursive https://github.com/rmtheis/tess-two.git tess2
 #git clone --recursive https://github.com/alexcohn/tess-two.git tess2
 
 cd tess2
-git checkout 434d54fb7a7b2d5bc412bc432a036e1cc9280a4f
+# git checkout 434d54fb7a7b2d5bc412bc432a036e1cc9280a4f
 echo "ndk.dir=$NDK_ROOT
 sdk.dir=$ANDROID_HOME" > local.properties
 head local.properties
-./gradlew assemble --scan
+./gradlew assemble
 cd ..
 
 
@@ -82,8 +82,8 @@ cd $SCRIPTPATH
 #"armeabi-v7a with NEON"
 declare -a ANDROID_ABIS=("armeabi-v7a"
 			 "arm64-v8a"
-			 "x86"
-			 "x86_64"
+# 			 "x86"
+# 			 "x86_64"
 			)
 
 cd openalpr/android-build
