@@ -44,10 +44,11 @@ echo $SCRIPTPATH
 git clone --recursive https://github.com/alexcohn/tess-two.git tess2
 
 cd tess2
+git checkout 4.1
 echo "ndk.dir=$NDK_ROOT
 sdk.dir=$ANDROID_HOME" > local.properties
 head local.properties
-./gradlew assemble
+./gradlew assemble --scan
 cd ..
 
 
