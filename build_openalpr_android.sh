@@ -23,7 +23,7 @@ export ANDROID_NDK_ROOT=$NDK_ROOT
 #echo $NDK_ROOT
 #echo $ANDROID_NDK_ROOT
 
-export ANDROID_PLATFORM=28
+export ANDROID_PLATFORM=27
 
 # In my case, FindJNI.cmake does not find java, so i had to manually specify these
 # You could try without it and remove the cmake variable specification at the bottom of this file
@@ -40,8 +40,8 @@ echo $SCRIPTPATH
 # Prepare Tesseract and Leptonica, using rmtheis/tess-two repository
 ####################################################################
 
-#git clone --recursive https://github.com/rmtheis/tess-two.git tess2
-git clone --recursive https://github.com/alexcohn/tess-two.git tess2
+git clone --recursive https://github.com/rmtheis/tess-two.git tess2
+#git clone --recursive https://github.com/alexcohn/tess-two.git tess2
 
 cd tess2
 git checkout 434d54fb7a7b2d5bc412bc432a036e1cc9280a4f
