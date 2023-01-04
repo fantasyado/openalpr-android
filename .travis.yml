@@ -33,5 +33,5 @@ deploy:
   
   on:
     tags: true
-    repo: leejoo71/openalpr-android
+    repo: fantasyado/openalpr-android
     branch: master
