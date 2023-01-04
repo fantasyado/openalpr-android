@@ -128,7 +128,7 @@ Generating project for arch $i
 	-DANDROID_ABI="$i" \
 	-DANDROID_CPP_FEATURES="rtti exceptions" \
 	-DANDROID_STL=c++_static \
-	-DANDROID_COMPILER_FLAGS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -lopencv_calib3d -Wconstant-conversion \
+	-DANDROID_COMPILER_FLAGS=-lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_shape -lopencv_videoio -Wconstant-conversion \
 	-DANDROID_LINKER_FLAGS=-lopencv_core
 	-DANDROID_ARM_MODE=arm \
 	-DANDROID_LD= -latomic \
