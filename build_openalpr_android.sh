@@ -44,7 +44,7 @@ echo $SCRIPTPATH
 git clone --recursive https://github.com/alexcohn/tess-two.git tess2
 
 cd tess2
-git checkout 4.1
+git checkout 434d54fb7a7b2d5bc412bc432a036e1cc9280a4f
 echo "ndk.dir=$NDK_ROOT
 sdk.dir=$ANDROID_HOME" > local.properties
 head local.properties
