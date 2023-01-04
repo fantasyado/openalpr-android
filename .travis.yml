@@ -26,8 +26,7 @@ script:
   
 deploy:
   provider: releases
-  api_key:
-  secure: $tobeaddedlater
+  api_key: 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
   file: "openalpr/android-build/*/*"
   skip_cleanup: true
   overwrite: true
